@@ -1,7 +1,8 @@
 void main () async{
 
    DataService service1 = DataService();
-   service1.getData();
+   String parsedData = await service1.getData();
+   print(parsedData);
 }
 
 class DataService {
