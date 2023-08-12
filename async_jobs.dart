@@ -8,15 +8,14 @@ void main () async{
 class DataService {
 
     Future<String> _getDataFromCloud () async {
-      await Future.delayed(Duration(seconds:5));
-      print('get_data finished');
+      await Future.delayed(const Duration(seconds:5),() =>  print('get_data finished'));
       return 'faked data';
     }
 
     Future<String> _parseDataFromCloud ({required String dataFromCloud}) async {
        await Future.delayed(Duration(seconds:4));
        print('parsing data done');
-       return'parsed data';
+       return 'parsed data';
     }
 
     Future<String> getData() async {
